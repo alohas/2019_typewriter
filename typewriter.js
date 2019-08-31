@@ -3,7 +3,7 @@
 
 const button = document.getElementById("start");
 const text = document.querySelector("h1").textContent.trim();
-console.log(text);
+console.log(text.length);
 
 document.querySelector("h1").textContent = "";
 let i = 0;
@@ -37,5 +37,7 @@ function startTyping() {
     i++;
 
     setTimeout(startTyping, delay + Math.floor(Math.random() * 20));
+  } else {
+    document.getElementById("typelast").play();
   }
 }
